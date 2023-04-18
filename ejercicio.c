@@ -30,5 +30,4 @@ int main(int argc, char const *argv[])
         printf("%d no es primo.\n", num);
     }
     return 0;
-
     }
