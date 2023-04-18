@@ -1,15 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
-
-int main()
+int primo(int n)
 {
-    int n;
     bool esPrimo = true;
-
-    printf("Ingrese un número entero positivo: ");
-    scanf("%d", &n);
-
-    for (int i = 2; i <= n / 2; i++)
+     for (int i = 2; i <= n / 2; i++)
     {
         if (n % i == 0)
         {
@@ -17,11 +11,23 @@ int main()
             break;
         }
     }
-
-    if (esPrimo)
-        printf("%d es primo.\n", n);
-    else
-        printf("%d no es primo.\n", n);
-
-    return 0;
+    return esPrimo;
 }
+int main(int argc, char const *argv[])
+{
+    int num;
+    printf("Ingrese un número entero positivo: ");
+    scanf("%d", &num);
+
+    int res = primo(num);
+    
+        if (res)
+    {
+        printf("%d es primo.\n", num);
+    }
+    else
+    {
+        printf("%d no es primo.\n", num);
+    }
+    return 0;
+    }
